@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const response = await fetch('https://salaobackend-1.onrender.com/feedback', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ mensagem, avaliacao, usuario_id: usuario.id })
+                    body: JSON.stringify({ mensagem, avaliacao, usuario: usuario.id })
                 });
 
                 const result = await response.text();
