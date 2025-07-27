@@ -1,5 +1,3 @@
-// scripts.js corrigido (com a parte dos modais via fetch removida, mantendo funcionalidade de feedback)
-
 window.addEventListener('DOMContentLoaded', event => {
 
     const navbarShrink = function () {
@@ -148,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!mensagem || avaliacao === 0) return alert('Por favor, preencha todos os campos.');
 
             try {
-                const response = await fetch('http://localhost:3000/feedback', {
+                const response = await fetch('https://salaobackend-1.onrender.com/feedback', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ mensagem, avaliacao, usuario_id: usuario.id })
@@ -178,7 +176,7 @@ async function carregarFeedbacks() {
     if (!feedbackContainer) return;
 
     try {
-        const response = await fetch('http://localhost:3000/feedback');
+        const response = await fetch('https://salaobackend-1.onrender.com/feedback');
         const feedbacks = await response.json();
 
         feedbackContainer.innerHTML = '';
