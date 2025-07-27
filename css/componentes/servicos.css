@@ -1,0 +1,178 @@
+/* Seção de Serviços */
+.portfolio-item {
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.portfolio-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 51, 102, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-hover {
+  opacity: 1;
+}
+
+.portfolio-caption {
+  padding: 1.5rem;
+  text-align: center;
+  background: white;
+}
+
+.portfolio-caption-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--senac-blue);
+}
+
+.service-price-badge {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #000;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+/* Tabela de preços */
+.price-table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+.price-table th, .price-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.price-table th {
+  background-color: var(--senac-blue);
+  color: white;
+  font-weight: 600;
+}
+
+.price-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.price-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.service-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.selected-services {
+  border-left: 4px solid var(--primary-color);
+}
+
+.total-price {
+  font-size: 1.2rem;
+  text-align: right;
+  padding: 10px;
+  background-color: rgba(255, 200, 0, 0.2);
+  border-radius: 5px;
+}
+
+/* Modais*/
+.portfolio-modal .modal-dialog {
+  margin: 1rem auto;
+  max-width: 1000px;
+}
+
+.portfolio-modal .modal-content {
+  padding: 2rem;
+  border-radius: 15px;
+  border: none;
+}
+
+.portfolio-modal .close-modal {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  z-index: 1;
+}
+.modal-header {
+  background-color: var(--senac-blue);
+  color: white;
+  padding: 1.5rem;
+}
+
+.modal-title {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.selected-services-box {
+  border-left: 4px solid var(--primary-color);
+  background-color: rgba(0, 51, 102, 0.05);
+}
+
+/* Tabela aprimorada */
+.table-responsive {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.table th {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Botões do modal */
+.btn-agendar {
+  padding: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-agendar:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Lista de serviços selecionados */
+#selected-services-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#selected-services-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+#selected-services-list li:last-child {
+  border-bottom: none;
+}
