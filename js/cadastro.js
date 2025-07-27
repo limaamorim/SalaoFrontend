@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     try {
-      const response = await fetch('http://localhost:3000/auth/register', {
+      const response = await fetch('https://salaobackend-1.onrender.com/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ firstname, lastname, email, number, password, gender })
